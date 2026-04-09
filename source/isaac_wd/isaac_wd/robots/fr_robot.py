@@ -52,9 +52,9 @@ FR_FOOT_LINKS = ["l_ankle_roll_link", "r_ankle_roll_link"]
 # Torso/base links (contact triggers robot-fell termination)
 FR_TORSO_LINKS = ["base_link", "chest_pitch_link"]
 
-# Legacy aliases kept for backward compatibility with template MDP wiring
-MY_ROBOT_CART_JOINT = "l_hip_pitch_joint"
-MY_ROBOT_POLE_JOINT = "r_hip_pitch_joint"
+# Legacy template joint aliases (cartpole demo naming)
+FR_ROBOT_CART_JOINT = "l_hip_pitch_joint"
+FR_ROBOT_POLE_JOINT = "r_hip_pitch_joint"
 
 ##
 # USD path resolution
@@ -69,7 +69,7 @@ _LOCAL_USD = os.path.join(
 # ArticulationCfg
 ##
 
-MY_ROBOT_CFG = ArticulationCfg(
+FR_ROBOT_CFG = ArticulationCfg(
     spawn=sim_utils.UsdFileCfg(
         usd_path=_LOCAL_USD,
         activate_contact_sensors=True,
@@ -160,3 +160,8 @@ MY_ROBOT_CFG = ArticulationCfg(
         ),
     },
 )
+
+# Backward compatibility (deprecated): use FR_ROBOT_* names
+MY_ROBOT_CFG = FR_ROBOT_CFG
+MY_ROBOT_CART_JOINT = FR_ROBOT_CART_JOINT
+MY_ROBOT_POLE_JOINT = FR_ROBOT_POLE_JOINT

@@ -5,23 +5,26 @@
 
 """Robot asset configurations for this extension."""
 
-from .my_robot import (
+from .fr_robot import (
+    FR_ALL_JOINTS,
+    FR_ARM_JOINTS,
+    FR_FOOT_LINKS,
+    FR_HEAD_JOINTS,
+    FR_LEG_JOINTS,
+    FR_ROBOT_CFG,
+    FR_ROBOT_CART_JOINT,
+    FR_ROBOT_POLE_JOINT,
+    FR_TORSO_JOINTS,
+    FR_TORSO_LINKS,
     MY_ROBOT_CFG,
     MY_ROBOT_CART_JOINT,
     MY_ROBOT_POLE_JOINT,
-    FR_LEG_JOINTS,
-    FR_TORSO_JOINTS,
-    FR_ARM_JOINTS,
-    FR_HEAD_JOINTS,
-    FR_ALL_JOINTS,
-    FR_FOOT_LINKS,
-    FR_TORSO_LINKS,
 )
 
 __all__ = [
-    "MY_ROBOT_CFG",
-    "MY_ROBOT_CART_JOINT",
-    "MY_ROBOT_POLE_JOINT",
+    "FR_ROBOT_CFG",
+    "FR_ROBOT_CART_JOINT",
+    "FR_ROBOT_POLE_JOINT",
     "FR_LEG_JOINTS",
     "FR_TORSO_JOINTS",
     "FR_ARM_JOINTS",
@@ -29,4 +32,7 @@ __all__ = [
     "FR_ALL_JOINTS",
     "FR_FOOT_LINKS",
     "FR_TORSO_LINKS",
+    "MY_ROBOT_CFG",
+    "MY_ROBOT_CART_JOINT",
+    "MY_ROBOT_POLE_JOINT",
 ]

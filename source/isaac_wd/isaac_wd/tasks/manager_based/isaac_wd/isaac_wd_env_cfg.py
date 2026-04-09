@@ -43,7 +43,7 @@ import isaaclab_tasks.manager_based.locomotion.velocity.mdp as loco_mdp
 ##
 
 from isaac_wd.robots import (  # isort:skip
-    MY_ROBOT_CFG,
+    FR_ROBOT_CFG,
     FR_LEG_JOINTS,
     FR_TORSO_JOINTS,
     FR_ARM_JOINTS,
@@ -66,7 +66,7 @@ class FrHumanoidSceneCfg(InteractiveSceneCfg):
         spawn=sim_utils.GroundPlaneCfg(size=(100.0, 100.0)),
     )
 
-    robot: ArticulationCfg = MY_ROBOT_CFG.replace(prim_path="{ENV_REGEX_NS}/Robot")
+    robot: ArticulationCfg = FR_ROBOT_CFG.replace(prim_path="{ENV_REGEX_NS}/Robot")
 
     # 接触力传感器：覆盖所有刚体，用于足部空气时间 + 非期望接触惩罚
     contact_forces = ContactSensorCfg(
